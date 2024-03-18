@@ -1,0 +1,22 @@
+<%- include('../partials/header') %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Instrument</th>
+      <th>Date</th>
+      <th>Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% sessions.forEach(function(s) { %>
+      <tr>
+        <td><%= s.instrument %></td>
+        <td><%= s.date %></td>
+        <td><%= s.rating %></td>
+        <td><a href="/sessions/<%= s._id %>">DETAILS</a></td>
+      </tr>
+      <% }); %>
+</table>
+
+<%- include('../partials/footer') %>

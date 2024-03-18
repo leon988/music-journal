@@ -1,0 +1,30 @@
+<%- include('../partials/header') %>
+
+<form id="new-form" action="/sessions" method="POST">
+  <label>Instrument:</label>
+  <select name="instrument">
+    <option value="Piano 🎹">Piano 🎹</option>
+    <option value="Guitar 🎸">Guitar 🎸</option>
+    <option value="Violin 🎻">Violin 🎻</option>
+    <option value="Drum 🥁">Drum 🥁</option>
+    <option value="Saxophone 🎷">Saxophone 🎷</option>
+    <option value="Flute 🎶">Flute 🎶</option>
+  </select>
+  <label>Exercise:</label>
+  <input type="text" name="exercise">
+  <label>Duration: (in minutes)</label>
+  <input type="number" min="1" name="duration">
+  <label>Date:</label>
+  <input type="Date" name="date">
+  <label>Rating:</label>
+  <select name="rating">
+    <option value="1 😕">1 😕</option>
+    <option value="2 😐">2 😐</option>
+    <option value="3 🙂">3 🙂</option>
+    <option value="4 😊">4 😊</option>
+    <option value="5 🌟">5 🌟</option>
+  </select>
+  <input type="submit" value="Add Practice Session">
+</form>
+
+<%- include('../partials/footer') %>

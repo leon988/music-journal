@@ -1,13 +1,19 @@
 const express = require('express');
 const router = express.Router();
 const sessionsCtrl = require('../controllers/sessions');
-// Require the auth middleware
-const ensureLoggedIn = require('../config/ensureLoggedIn');
+// const ensureLoggedIn = require('../config/ensureLoggedIn');
 
-// router.get('/', sessionsCtrls.index);
-// // Use ensureLoggedIn middleware to protect routes
-// router.get('/new', ensureLoggedIn, sessionsCtrl.new);
-// router.get('/:id', sessionsCtrl.show);
-// router.post('/', ensureLoggedIn, sessionsCtrl.create);
+// GET /sessions
+router.get('/', sessionsCtrl.index);
+  
+// GET /sessions/new
+router.get('/new', sessionsCtrl.new);
+
+// POST /movies
+router.post('/', sessionsCtrl.create);
+
+// GET /sessions/:id (show functionality) MUST be below new route
+router.get('/:id', sessionsCtrl.show);
+
 
 module.exports = router;
