@@ -3,11 +3,24 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap" rel="stylesheet">
   </head>
   <body>
+    <!-- <nav>
+      <a href="/">HOME</a>  | <a href="/sessions">PRACTICE</a> | <a href="/sessions/new"> ADD PRACTICE SESSION</a>
+    </nav> -->
     <nav>
-      <a href="/">Home</a>  | <a href="/sessions">Practice</a> | <a href="/sessions/new"> Add Practice Session</a>
+      <img src="">
+      <a href="/" <%- title === 'Home' ? 'class="active"' : '' %>>HOME</a>
+      <% if (user) { %>
+        <a href="/sessions" <%- title === 'Practice' ? 'class="active"' : '' %>>PRACTICE</a> |
+        <a href="/sessions/new" <%- title === 'Add Practice Session' ? 'class="active"' : '' %>>ADD PRACTICE SESSION</a>
+        <a href="/logout">LOG OUT</a>
+      <% } else { %>
+        <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+      <% } %>
     </nav>
    <main>
     <h1><%= title %></h1>
-  

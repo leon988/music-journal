@@ -15,8 +15,13 @@
         <td><%= s.date %></td>
         <td><%= s.rating %></td>
         <td><a href="/sessions/<%= s._id %>">DETAILS</a></td>
+        <td>
+          <form action="/sessions/<%= s._id %>?_method=DELETE" method="POST">
+            <button type="submit">Delete</button>
+          </form>
+        </td>
       </tr>
-      <% }); %>
+    <% }); %>
 </table>
 
 <%- include('../partials/footer') %>

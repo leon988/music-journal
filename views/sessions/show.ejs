@@ -1,36 +1,36 @@
 <%- include('../partials/header') %>
 
 <section id="show-page">
-  <div>Instrument: </div>
+  <div><b>Instrument:</b> </div>
   <div><%= session.instrument %></div>
-  <div>Exercise: </div>
+  <div><b>Exercise:</b> </div>
   <div><%= session.exercise %></div>
-  <div>Duration: </div>
+  <div><b>Duration: </b></div>
   <div><%= session.duration%></div>
-  <div>Technique: </div>
+  <div><b>Technique:</b> </div>
   <div><%= session.technique %></div>
-  <div>Date: </div>
+  <div><b>Date: </b></div>
   <div><%= session.date %></div>
-  <div>Rating: </div>
+  <div><b>Rating: </b></div>
   <div><%= session.rating %></div>
 </section>
 
 <!-- Add Notes Form -->
 <h2>Notes</h2>
-<a href="/sessions/<%= session._id %>/notes/new">Create a New Note</a>
+<button onclick="window.location.href='/sessions/<%= session._id %>/notes/new'">Create a New Note</button>
 
 <% if (session.notes.length) { %>
       <% session.notes.forEach(function(n) { %>
         <section>
-          <div><strong>Date</strong></div>
+          <div><b>Date</b></div>
           <div><%= n.date %></div>
-          <div><strong>Rating</strong></div>
+          <div><b>Rating</b></div>
           <div><%= n.rating %></div>
-          <div><strong>Content</strong></div>
+          <div><b>Content</b></div>
           <div><%= n.content %></div>
       <% }); %>
 <% } else { %>
-  <h2>No Tickets Yet</h2>
+  <h2>No Notes Yet</h2>
 </section>
 <% } %>
 

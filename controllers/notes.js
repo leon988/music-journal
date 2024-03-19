@@ -22,9 +22,9 @@ async function create(req, res) {
   try {
       const session = await Session.findById(req.params.id);
       session.notes.push({
-          content: req.body.content,
           date: req.body.date,
-          rating: req.body.rating
+          rating: req.body.rating,
+          content: req.body.content
       });
       await session.save();
       res.redirect(`/sessions/${session._id}`);

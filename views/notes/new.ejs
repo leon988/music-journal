@@ -2,15 +2,8 @@
 
 <form action="/sessions/<%= sessionId %>/notes" method="post">
   <div class="form-group">
-    <label for="content">Create a new note:</label>
-    <!-- <input type="string" name="content"> -->
-    <small>Document your journey, orchestrate your growth.</small>
-    <textarea id="note" name="content" type="string"rows="6" cols="50"></textarea>
-  </div>
-
-  <div class="form-group">
     <label for="date">Date:</label>
-    <input type="number" name="date">
+    <input type="date" name="date">
   </div>
 
   <div class="form-group">
@@ -22,6 +15,13 @@
       <option value="4 😊">4 😊</option>
       <option value="5 🌟">5 🌟</option>
     </select>
+  </div>
+  
+  <div class="form-group">
+    <label for="content">Create a new note:</label>
+    <!-- <input type="string" name="content"> -->
+    <!-- <small>Document your journey, orchestrate your growth.</small> -->
+    <textarea id="note" name="content" type="string"rows="6" cols="50"></textarea>
   </div>
 
   <button type="submit">Add Note</button>

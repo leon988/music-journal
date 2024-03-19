@@ -1,15 +1,71 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 3em ;
+}
+
+h1{
+  font-family: "Martian Mono", monospace;
+  color:#FFEF9F;
 }
 
 a {
-  color: #00B7FF;
+  color: #330C2F;
+  font-family: "Martian Mono", monospace; 
 }
 
-/* .background {
-  background-image: url('http://www.nick.com/spongebob-squarepants');
-  background-position: center;
-  background-size: cover;
-  overflow: hidden;
-} */
+body > nav {
+  grid-area: nav;
+  background-color: #CBF3D2; 
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px 0 30px;
+}
+
+nav > img {
+  width: 34px;
+  object-fit: contain;
+  margin-right: auto;
+}
+
+body > main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #B7C0EE; /* Lila claro */
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+body > main h1:first-child {
+  margin-bottom: 50px;
+}
+
+nav > a {
+  margin: 20px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+nav > a:hover:not(.active) {
+  color: #FFFFFF;
+  background-color: #7067CF; 
+}
+
+nav > a.active {
+  color: #FFFFFF;
+  cursor: default;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 34px;
+}
+
+.login img {
+  height: 30px;
+}

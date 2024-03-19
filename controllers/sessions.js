@@ -4,7 +4,25 @@ module.exports = {
   new: newSession, 
   index, 
   show,
-  create
+  create,
+  delete: deleteSession
+};
+
+async function deleteSession(req, res) {
+  try {
+    // Find the session based on session ID and user ID
+    const session = await Session.findOne({ _id: req.params.id, user: req.user._id });
+    // If session not found, redirect
+    if (!session) {
+      return res.redirect('/sessions');
+    }
+    // Remove the session
+    await session.deleteOne();
+    // Redirect back to sessions
+    res.redirect('/sessions');
+  } catch (error) {
+    console.error(error);
+  }
 };
 
 async function show(req,res){
