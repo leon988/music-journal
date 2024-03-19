@@ -15,4 +15,23 @@
   <div><%= session.rating %></div>
 </section>
 
+<!-- Add Notes Form -->
+<h2>Notes</h2>
+<a href="/sessions/<%= session._id %>/notes/new">Create a New Note</a>
+
+<% if (session.notes.length) { %>
+      <% session.notes.forEach(function(n) { %>
+        <section>
+          <div><strong>Date</strong></div>
+          <div><%= n.date %></div>
+          <div><strong>Rating</strong></div>
+          <div><%= n.rating %></div>
+          <div><strong>Content</strong></div>
+          <div><%= n.content %></div>
+      <% }); %>
+<% } else { %>
+  <h2>No Tickets Yet</h2>
+</section>
+<% } %>
+
 <%- include('../partials/footer') %>

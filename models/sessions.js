@@ -3,18 +3,17 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const notesSchema = new Schema ({
-  content: {
-    type: String,
-    required: true
-  },
   date: {
-    type: Number,
-    default: () => new Date()
+    type: Date
   },
   rating: {
     type: String,
     enum: ['1 😕 ','2 😐','3 🙂','4 😊','5 🌟'],
     require: true
+  },
+  content: {
+    type: String,
+    required: true
   }
 });
 
@@ -39,16 +38,13 @@ const sessionSchema = new Schema({
   },
   date: {
     type: Date
-    // default: function() {
-    //   return new Date().getFullYear();
-    // },
   },
   rating: {
     type: String,
     enum: ['1 😕 ','2 😐','3 🙂','4 😊','5 🌟'],
     require: true
   },
-  note: [notesSchema],
+  notes: [notesSchema],
 });
 
 
