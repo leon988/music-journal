@@ -15,6 +15,12 @@
   <div><%= session.rating %></div>
 </section>
 
+<!-- Add an "Edit Session" button -->
+<a href="/sessions/<%= session._id %>/edit">
+  <button type="submit">Edit Session</button>
+</a>
+
+
 <!-- Add Notes Form -->
 <h2>Notes</h2>
 <button onclick="window.location.href='/sessions/<%= session._id %>/notes/new'">Create a New Note</button>
@@ -28,6 +34,9 @@
           <div><%= n.rating %></div>
           <div><b>Content</b></div>
           <div><%= n.content %></div>
+          <form action="/notes/<%= n._id %>?_method=DELETE" method="POST">
+            <button type="submit">Remove</button>
+          </form>
       <% }); %>
 <% } else { %>
   <h2>No Notes Yet</h2>

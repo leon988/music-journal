@@ -2,7 +2,21 @@ const Session = require('../models/sessions');
 
 module.exports = {
   new: newNote,
-  create
+  create, 
+  delete: deleteNote
+};
+
+async function deleteNote(req,res){
+  try {
+    const session = await Session.findOne({ 'notes._id': req.params.id});
+    session.notes.remove(req.params.id);
+    await session.save();
+    console.log(session);
+    console.log(req.params.id);
+    res.redirect(`/sessions/${session._id}`);
+  } catch (err) {
+    console.log(err)
+  }
 };
 
 async function newNote(req,res){

@@ -5,20 +5,33 @@ module.exports = {
   index, 
   show,
   create,
-  delete: deleteSession
+  delete: deleteSession,
+  update, 
+  edit
 };
+
+async function update(req, res){
+  try {
+    const session = await Session.findByIdAndUpdate(req.params.id, req.body);
+    res.redirect(`/sessions/${session._id}`)
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+async function edit(req, res){
+  try {
+    const session = await Session.findById(req.params.id);
+    res.render('sessions/edit', {  title: 'Edit Session', session });
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 
 async function deleteSession(req, res) {
   try {
-    // Find the session based on session ID and user ID
-    const session = await Session.findOne({ _id: req.params.id, user: req.user._id });
-    // If session not found, redirect
-    if (!session) {
-      return res.redirect('/sessions');
-    }
-    // Remove the session
-    await session.deleteOne();
-    // Redirect back to sessions
+    const session = await Session.findByIdAndDelete(req.params.id)
     res.redirect('/sessions');
   } catch (error) {
     console.error(error);
