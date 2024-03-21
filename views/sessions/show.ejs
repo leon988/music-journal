@@ -8,7 +8,7 @@
   <div><b>Duration: </b></div>
   <div><%= session.duration%></div>
   <div><b>Date: </b></div>
-  <div><%= session.date %></div>
+  <div><%= session.date.toLocaleDateString()%></div>
   <div><b>Rating: </b></div>
   <div><%= session.rating %></div>
 </section>
@@ -27,7 +27,7 @@
       <% session.notes.forEach(function(n) { %>
         <section class="card">
           <div><b>Date</b></div>
-          <div><%= n.date %></div>
+          <div><%= n.date.toLocaleDateString() %></div>
           <div><b>Rating</b></div>
           <div><%= n.rating %></div>
           <div><b>Content</b></div>
