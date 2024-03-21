@@ -17,7 +17,7 @@
 
 <!-- Add an "Edit Session" button -->
 <a href="/sessions/<%= session._id %>/edit">
-  <button type="submit">Edit Session</button>
+  <button class="edit-button" type="submit">Edit Session</button>
 </a>
 
 
@@ -27,7 +27,7 @@
 
 <% if (session.notes.length) { %>
       <% session.notes.forEach(function(n) { %>
-        <section>
+        <section class="card">
           <div><b>Date</b></div>
           <div><%= n.date %></div>
           <div><b>Rating</b></div>
@@ -35,7 +35,7 @@
           <div><b>Content</b></div>
           <div><%= n.content %></div>
           <form action="/notes/<%= n._id %>?_method=DELETE" method="POST">
-            <button type="submit">Remove</button>
+            <button class="remove-button" type="submit">Remove</button>
           </form>
       <% }); %>
 <% } else { %>

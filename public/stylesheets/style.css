@@ -1,21 +1,21 @@
 body {
   padding: 50px;
-  font: 3em ;
 }
 
-h1{
+h1,
+h2 {
   font-family: "Martian Mono", monospace;
-  color:#FFEF9F;
+  color: #7ea8a8;
 }
 
 a {
-  color: #330C2F;
-  font-family: "Martian Mono", monospace; 
+  color: #a77f95;
+  font-family: "Martian Mono", monospace;
 }
 
 body > nav {
   grid-area: nav;
-  background-color: #CBF3D2; 
+  background-color: #d9d6e8;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -29,11 +29,10 @@ body > nav {
 }
 
 body > main {
-  grid-area: main;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #B7C0EE; /* Lila claro */
+  background-color: #f0f0f0;
   padding: 20px;
   overflow-y: scroll;
 }
@@ -47,15 +46,16 @@ nav > a {
   text-decoration: none;
   padding: 10px;
   border-radius: 5px;
+  color: #9b9ab6;
 }
 
 nav > a:hover:not(.active) {
-  color: #FFFFFF;
-  background-color: #7067CF; 
+  color: #ffffff;
+  background-color: #a77f95;
 }
 
 nav > a.active {
-  color: #FFFFFF;
+  color: #ffffff;
   cursor: default;
 }
 
@@ -79,10 +79,11 @@ table {
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
-  background-color: #CBF3D2;
+  background-color: #7ea8a8;
 }
 
-th, td {
+th,
+td {
   padding: 1.5em;
   text-align: left;
   border-bottom: 1px solid #ddd;
@@ -90,16 +91,16 @@ th, td {
 }
 
 th {
-  background-color: #FFEF9F;
-  color: #330C2F;
+  background-color: #7ea8a8;
+  color: #ffffff;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 1em;
 }
 
 td {
-  background-color: #B7C0EE;
-  color: #330C2F;
+  background-color: #f0f0f0;
+  color: #7d7d7d;
 }
 
 tr:hover {
@@ -107,40 +108,25 @@ tr:hover {
 }
 
 button {
-  padding: 0.5em 1.5em;
+  padding: 1em 1em;
   border: none;
   border-radius: 4px;
-  background-color: #007bff;
-  color: #fff;
+  background-color: #b5d3d3;
+  color: #ffffff;
   cursor: pointer;
-  transition: background-color 0.3s ease;
   font-family: "Martian Mono", monospace;
-  width: 100%;
-  display: block;
-  margin-top: 5px;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #a77f95;
 }
 
-@media screen and (max-width: 600px) {
-  th, td {
-    padding: 1em;
-  }
-
-  button {
-    padding: 0.5em 1.5em;
-  }
+.edit-button {
+  margin-top: 2em;
 }
 
-/* new.ejs edit.ejs */
+/* new.ejs - edit.ejs */
 form {
-  margin-top: 20px;
-  padding: 20px;
-  border-radius: 8px;
-  background-color: #CBF3D2;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 500px;
 }
@@ -149,7 +135,7 @@ label {
   display: block;
   margin-bottom: 5px;
   font-family: "Martian Mono", monospace;
-  color: #330C2F;
+  color: #7d7d7d;
 }
 
 select,
@@ -162,22 +148,22 @@ input[type="date"] {
   border: 1px solid #ddd;
   border-radius: 4px;
   font-family: "Martian Mono", monospace;
-  color: #330C2F;
+  color: #7d7d7d;
 }
 
 input[type="submit"] {
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
-  background-color: #007bff;
-  color: #fff;
+  background-color: #b5d3d3;
+  color: #ffffff;
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-family: "Martian Mono", monospace;
 }
 
 input[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: #a77f95;
 }
 
 /* show.ejs */
@@ -185,7 +171,7 @@ input[type="submit"]:hover {
   margin-top: 20px;
   padding: 20px;
   border-radius: 8px;
-  background-color: #CBF3D2;
+  background-color: #ffffff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 500px;
@@ -194,9 +180,45 @@ input[type="submit"]:hover {
 #show-page div {
   margin-bottom: 10px;
   font-family: "Martian Mono", monospace;
-  color: #330C2F;
+  color: #7d7d7d;
 }
 
 #show-page b {
   font-weight: bold;
+}
+
+/* show.ejs notes card */
+
+.card {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+}
+
+.card div {
+  margin-bottom: 10px;
+  font-family: "Martian Mono", monospace;
+  color: #7d7d7d;
+}
+
+.card b {
+  font-weight: bold;
+}
+
+.remove-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #ff6347;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Martian Mono", monospace;
+}
+
+.remove-button:hover {
+  background-color: #ff473b;
 }
