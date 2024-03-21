@@ -8,12 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap" rel="stylesheet">
   </head>
   <body>
-    <!-- <nav>
-      <a href="/">HOME</a>  | <a href="/sessions">PRACTICE</a> | <a href="/sessions/new"> ADD PRACTICE SESSION</a>
-    </nav> -->
     <nav>
-      <img src="">
-      <a href="/" <%- title === 'Home' ? 'class="active"' : '' %>>HOME</a>
+      <div class="nav-bar">📓🎵</div>
+      <a href="/" <%- title === 'Home' ? 'class="active"' : '' %>>HOME</a> |
       <% if (user) { %>
         <a href="/sessions" <%- title === 'Practice' ? 'class="active"' : '' %>>PRACTICE</a> |
         <a href="/sessions/new" <%- title === 'Add Practice Session' ? 'class="active"' : '' %>>ADD PRACTICE SESSION</a>

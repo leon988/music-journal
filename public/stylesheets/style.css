@@ -22,7 +22,7 @@ body > nav {
   padding: 0 20px 0 30px;
 }
 
-nav > img {
+.nav-bar {
   width: 34px;
   object-fit: contain;
   margin-right: auto;
@@ -68,4 +68,135 @@ nav > a.active {
 
 .login img {
   height: 30px;
+}
+
+/* show.ejs */
+table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  background-color: #CBF3D2;
+}
+
+th, td {
+  padding: 1.5em;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-family: "Martian Mono", monospace;
+}
+
+th {
+  background-color: #FFEF9F;
+  color: #330C2F;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+td {
+  background-color: #B7C0EE;
+  color: #330C2F;
+}
+
+tr:hover {
+  background-color: #f9f9f9;
+}
+
+button {
+  padding: 0.5em 1.5em;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Martian Mono", monospace;
+  width: 100%;
+  display: block;
+  margin-top: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (max-width: 600px) {
+  th, td {
+    padding: 1em;
+  }
+
+  button {
+    padding: 0.5em 1.5em;
+  }
+}
+
+/* new.ejs edit.ejs */
+form {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #CBF3D2;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-family: "Martian Mono", monospace;
+  color: #330C2F;
+}
+
+select,
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: "Martian Mono", monospace;
+  color: #330C2F;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Martian Mono", monospace;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* show.ejs */
+#show-page {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #CBF3D2;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+#show-page div {
+  margin-bottom: 10px;
+  font-family: "Martian Mono", monospace;
+  color: #330C2F;
+}
+
+#show-page b {
+  font-weight: bold;
 }
