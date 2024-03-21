@@ -58,12 +58,11 @@ function newSession(req,res){
 
 async function create (req,res){
   try {
-    const { instrument, exercise, duration, technique, date, rating} = req.body;
+    const { instrument, exercise, duration, date, rating} = req.body;
     const newSession = new Session({
       instrument,
       exercise,
       duration,
-      technique,
       date, 
       rating
     });

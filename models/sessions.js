@@ -33,9 +33,6 @@ const sessionSchema = new Schema({
       return Date.now()
     }
   },
-  technique: {
-    type: String
-  },
   date: {
     type: Date
   },
