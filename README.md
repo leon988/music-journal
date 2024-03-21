@@ -3,12 +3,12 @@
 ## Description
 The Music Journal App is a digital platform designed for musicians to organize and track their practice sessions effectively. Whether you're a beginner or an advanced player, this app provides a structured way to log your practice sessions, including time, date, ratings, and details of the practice content. Additionally, users can create detailed notes within each session to reflect on their progress, challenges, and insights.
 
-## Screenshot(s)
+## Screenshots
 ![Screenshot 1](/public/images/IMG-1.png)
 ![Screenshot 2](/public/images/IMG-2.png)
 
 ## Technologies Used
-- HTML
+- HTM
 - CSS
 - JavaScript
 - Node.js
@@ -16,7 +16,7 @@ The Music Journal App is a digital platform designed for musicians to organize a
 - MongoDB
 
 ## Getting Started
-To access the Practice Session Journal App, you can visit the deployed version [here](). 
+To access the Practice Session Journal App, you can visit the deployed version [here](https://music-journal-9b307ae2ad5a.herokuapp.com/). 
 
 ### Instructions
 1. Sign up for an account or log in if you already have one.
