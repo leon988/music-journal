@@ -1,6 +1,5 @@
 # Music Journal 🎵📝
 
-## Description
 The Music Journal App is a digital platform designed for musicians to organize and track their practice sessions effectively. Whether you're a beginner or an advanced player, this app provides a structured way to log your practice sessions, including time, date, ratings, and details of the practice content. Additionally, users can create detailed notes within each session to reflect on their progress, challenges, and insights.
 
 ## Screenshots
