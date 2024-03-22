@@ -7,7 +7,7 @@ The Music Journal App is a digital platform designed for musicians to organize a
 ![Screenshot 2](/public/images/IMG-2.png)
 
 ## Technologies Used
-- HTM
+- HTML
 - CSS
 - JavaScript
 - Node.js
